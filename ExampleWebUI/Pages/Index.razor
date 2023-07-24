@@ -1,0 +1,208 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+
+
+<div style="width: 375px; height: 800px; background-color: #2F2E3E">
+    <div class="container text-white">
+
+        <div class="app-header d-flex justify-content-between pt-3">
+            <img src="images/targe-logo.svg" />
+            <img src="images/menu.svg" />
+        </div>
+
+        <div class="d-flex flex-column  mt-3">
+            <span class="fs-6 "> Hi,  <span class="fw-bolder"> Akıncan </span> </span>
+            <span style="font-size: 0.8rem" class="fw-lighter opacity-25"> Today Ekim 29, 2022  </span>
+
+        </div>
+
+        <div class="mt-3">
+            <span class="fw-bolder fs-6 text-white"> İklim Raporu </span>
+        </div>
+
+        <div class="mt-2">
+
+            <RadzenAccordion Style="background :none ">
+                <Items>
+
+                    <RadzenAccordionItem class="text-white" Style="background: linear-gradient(180deg, #44475C 0%, rgba(68, 71, 92, 0.26) 100%) !important;"
+                                         Text=@GetText("Cuma","Temmuz 21, 2023","16/10C","30/80%")>
+                        <div class="d-flex flex-1 w-100 align-items-center">
+                            <img width="15" height="30" src="images/temperature.svg" />
+                            <div style="font-size:0.77rem" class="ms-1 d-flex flex-column justify-content-center">
+                                <span class="fw-bolder"> Gün içerisinde ki; </span>
+                                <span>en yüksek sıcaklık 30°C, en düşük sıcaklık ise 16°C’dir </span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mt-2 align-items-center">
+                            <img width="15" height="30" src="images/humidity.svg" />
+                            <div style="font-size:0.77rem" class="ms-1 d-flex flex-column justify-content-center">
+                                <span class="fw-bolder"> Gün içerisinde ki; </span>
+                                <span>en yüksek nem 80%, en düşük nem ise 20%'dir. </span>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="d-flex align-items-center mt-3">
+
+                            <div style="height:75px; width:2px; display:block; background:white" class="me-2"> </div>
+
+                            <div class="flex-table ">
+                                <div class="flex-row">
+                                    <div class="flex-cell cell-3">
+                                        <div class="d-flex align-items-center">
+                                            <img class="me-1" src="images/carbon_rain.svg" />
+                                            <span style="font-size:0.9rem">0.68 mm</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-cell cell-3">
+                                        <div class="d-flex align-items-center">
+                                            <img class="me-1" src="images/tabler_uv-index.svg" />
+                                            <span style="font-size:0.9rem">5 W/m²</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-cell cell-3">
+                                        <div class="d-flex align-items-center">
+                                            <img class="me-1" src="images/ph_wind.svg" />
+                                            <span style="font-size:0.9rem">731 ppm</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-cell cell-3">
+                                        <div class="d-flex align-items-center">
+                                            <img class="me-1" src="images/fluent-mdl2_wind-direction.svg" />
+                                            <span style="font-size:0.9rem">Kuzey Doğu</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-cell cell-3">
+                                        <div class="d-flex align-items-center">
+                                            <img class="me-1" src="images/ph_wind.svg" />
+                                            <span style="font-size:0.9rem">4.5 m/sn</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="flex-table mt-3">
+                            <div class="flex-row">
+                                <div class="flex-cell"></div>
+                                <div class="flex-cell">
+                                    <div class="d-flex flex-column align-items-center justify-content-center">
+                                        <img height="18" src="images/sunrise.svg" />
+                                        <span>Sabah</span>
+                                    </div>
+                                </div>
+                                <div class="flex-cell ">
+
+                                    <div class="d-flex flex-column align-items-center justify-content-center">
+                                        <img height="18" src="images/afternoon.svg" />
+                                        <span>Öğle</span>
+                                    </div>
+                                </div>
+                                <div class="flex-cell">
+                                    <div class="d-flex flex-column align-items-center justify-content-center">
+                                        <img height="18" src="images/sunset.svg" />
+                                        <span>Akşam</span>
+                                    </div>
+                                </div>
+                                <div class="flex-cell">
+                                    <div class="d-flex flex-column align-items-center justify-content-center">
+                                        <img height="18" src="images/night.svg" />
+                                        <span>Gece</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-row">
+                                <div class="flex-cell">Sıcaklık</div>
+                                <div class="flex-cell">3°C</div>
+                                <div class="flex-cell">11°C</div>
+                                <div class="flex-cell">34°C</div>
+                                <div class="flex-cell">3°C</div>
+                            </div>
+                        </div>
+
+
+                    </RadzenAccordionItem>
+
+
+
+
+                </Items>
+            </RadzenAccordion>
+
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+<style>
+    .rz-accordion-header a[role='tab'] {
+        padding: 0.5rem 1rem;
+        color: #fff !important;
+    }
+
+    .rz-accordion-header {
+        border-radius: 6px !important;
+        margin-bottom: 10px;
+    }
+
+    .rz-accordion-content {
+        margin-top: -12px !important;
+        background: linear-gradient(180deg, #44475C 0%, rgba(68, 71, 92, 0.26) 100%) !important;
+        margin-bottom: 10px;
+    }
+
+
+    .flex-table {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .flex-cell {
+        flex: 1; /* Hücrelerin genişliğini eşit dağıtır */
+        min-height: 36px; /* Bu, hücrenin asgari yüksekliğidir. Değerleri gereksinimlerinize göre ayarlayın. */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Metin hücrenin genişliğini aştığında üç nokta (...) kullanır */
+    }
+
+    .cell-3 {
+        flex: 0 0 calc(100% / 3) !important;
+    }
+
+    .rz-accordion {
+        box-shadow: none !important;
+    }
+</style>
+
+
+
+@code {
+
+
+    public string GetText(string day, string datetime, string temperature, string humidity)
+    {
+        return $"<div class='text-white d-flex justify-content-between'>\n <div style='line-height: initial;' class='d-flex flex-column'>\n <div style='font-size:0.9rem'> {day} </div>\n  <div style='font-size:0.6rem ;color:#9D9D9D'> {datetime} </div>\n  </div>\n\n <div class=\"d-flex align-items-center\">\n  <img class='pe-1' src=\"images/temperature.svg\" />\n  <div style='font-size:0.9rem'> {temperature} </div>\n    </div>\n\n    <div class=\"ps-2 d-flex align-items-center\">\n  <img class='pe-1' src=\"images/humidity.svg\" />\n  <div style='font-size:0.9rem'> {humidity}  </div>\n    </div>\n</div>";
+    }
+}
+
